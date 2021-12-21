@@ -122,11 +122,19 @@ p {
     bottom:2em;
     right: 2em;
     z-index: 2;
+    border-radius: 100px;
 }
 
-.rsvp img {
+.rsvp a img {
     height: 80px;
+    transition: all 0.8s ease-in-out;
     box-shadow: var(--shadow-2-elevation-medium);
+    border-radius: 100px;
+}
+
+ .rsvp a:hover img {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-2-elevation-high);
     border-radius: 100px;
 }
 
@@ -247,6 +255,19 @@ p.bigtext a {
 PAGE WHERE
 ***/
 
+body.internal .rsvp {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-left: 1em;
+    border-radius: 100px;
+}
+
+body.internal .rsvp img a {
+    height: 70px;
+    border-radius: 100px;
+}
+
 body.internal {
     padding-bottom: 120px;
 }
@@ -295,7 +316,7 @@ div.navigation a:visited {
     transition: all 1s ease-in-out;
 }
 
-div.navigation a:hover {
+div.navigation .menu a:hover {
     border-bottom: solid 1px var(--green);
 }
 div.navigation a.logo:hover {
@@ -310,12 +331,12 @@ div.navigation .test {
     height: 100%;
     position: absolute;
     top:0;
-    z-index: 1;
+    z-index: 3;
     border-radius: 100px;
     flex-direction: row;
     justify-content: left;
     box-shadow: var(--shadow-1-elevation-high);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 div.navigation .test div {
