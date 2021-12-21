@@ -43,6 +43,10 @@ div {
     position: relative;
 }
 
+section {
+    overflow: hidden;
+}
+
 /* section {
     min-height: 90vh;
 } */
@@ -53,7 +57,6 @@ section.hero {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    overflow: hidden;
 }
 
 .img-over {
@@ -77,19 +80,19 @@ section.hero {
     left: 0%;
 }
 
-.img-top.img-left {
+section.hero .img-top.img-left {
     height: 45vh;
 }
 
-.img-top.img-right {
+section.hero .img-top.img-right {
     height: 45vh;
 }
 
-.img-bottom.img-left {
+section.hero .img-bottom.img-left {
     height: 60vh;
 }
 
-.img-bottom.img-right {
+section.hero .img-bottom.img-right {
     height: 60vh;
 }
 
@@ -218,6 +221,19 @@ iframe {
 
 section.video {
     position: relative;
+}
+
+section.video img.img-top.img-left {
+    height: 80vh;
+}
+section.video img.img-top.img-right {
+    height: 100vh;
+}
+section.video img.img-bottom.img-left {
+    height: 80vh;
+}
+section.video img.img-bottom.img-right {
+    height: 50vh;
 }
 
 p.bigtext a {
