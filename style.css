@@ -46,9 +46,6 @@ div {
 
 section {
     overflow: hidden;
-}
-
-section {
     min-height: 90vh;
 }
 
@@ -160,7 +157,7 @@ p.date {
 }
 
 section.standard {
-    padding: 6rem;
+    padding: 12rem;
 }
 
 div.box {
