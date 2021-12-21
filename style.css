@@ -969,6 +969,9 @@ RESPONSIVENESS
     section.video img.img-bottom.img-right {
         height: 25vw;
     }
+    .video iframe  {
+        height: 200px;
+    }
 }
 
 @media (max-width: 576px) { 
