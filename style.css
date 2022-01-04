@@ -16,7 +16,7 @@
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
     font-size: 16px;
 }
 
@@ -46,7 +46,7 @@ div {
 
 section {
     overflow: hidden;
-    /* min-height: 90vh; */
+    min-height: 90vh;
 }
 
 section.hero {
@@ -123,7 +123,7 @@ p {
 
 .rsvp {
     position: fixed;
-    bottom:2rem;
+    bottom: 2rem;
     right: 2rem;
     border-radius: 100px;
     z-index: 4;
@@ -136,7 +136,7 @@ p {
     border-radius: 100px;
 }
 
- .rsvp a:hover img {
+.rsvp a:hover img {
     transform: scale(1.1);
     box-shadow: var(--shadow-2-elevation-high);
     border-radius: 100px;
@@ -186,6 +186,12 @@ p.bigtext {
     margin: 0px;
 }
 
+p.hugetext {
+    font-size: 5rem;
+    padding: 0px;
+    margin: 0px;
+}
+
 span.daje {
     font-weight: bolder;
     font-style: italic;
@@ -193,15 +199,23 @@ span.daje {
 
 div.divider {
     width: 25%;
-    border-bottom: solid 1.5px var(--light-green);
-    margin-bottom: 2rem;
-    margin-top: 3rem;
+    border-bottom: solid 1.5px var(--green);
 }
+
+div.divider.top {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+div.divider.bottom {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
 
 p.subtext {
     font-size: 1.5rem;
     margin: 0px;
-    margin-bottom: 2rem;
 }
 
 p.details a,
@@ -228,7 +242,7 @@ section.alt {
     padding: 12rem 10em;
 }
 
-.video iframe  {
+.video iframe {
     margin-top: 3rem;
     width: 90%;
     box-shadow: var(--shadow-1-elevation-high);
@@ -248,21 +262,113 @@ section.video {
 section.video img.img-top.img-left {
     height: 80vh;
 }
+
 section.video img.img-top.img-right {
     height: 100vh;
 }
+
 section.video img.img-bottom.img-left {
-    height: 80vh;
+    height: 60vh;
 }
+
 section.video img.img-bottom.img-right {
-    height: 50vh;
+    height: 40vh;
 }
 
 p.bigtext a {
     font-weight: bolder;
     font-style: italic;
-    text-decoration: underline;
+    display: inline-block;
+    position: relative;
     color: var(--text);
+    text-decoration: underline;
+    /* padding: 0.2em 0.05em; */
+    transition: all .5s ease-in-out;
+}
+
+p.bigtext a:hover {
+    color: var(--red);
+}
+
+/* p.bigtext a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    background: var(--light-green);
+    z-index: -1;
+    transform: scaleY(.2);
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  p.bigtext a:hover:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--light-green);
+    z-index: -1;
+    border-radius: 8px;
+  } */
+
+img.img-remark {
+    width: 40vw;
+}
+
+img.remark-top {
+    margin-bottom: 5rem;
+}
+
+a.button {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    text-decoration: none;
+    color: var(--green);
+    background: var(--light-green);
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    /* border-bottom: solid 5px transparent; */
+    box-shadow: var(--shadow-1-elevation-medium);
+    transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+a.button:hover {
+    /* border-bottom:solid 5px var(--light-green); */
+    box-shadow: var(--shadow-1-elevation-high);
+    transform: scale(1.05)
+}
+
+/*** GIFT SECTION ***/
+
+section.gift {
+    height: 100vh;
+    padding: 0rem 12rem;
+    z-index: 3;
+}
+
+section.gift img {
+    bottom: -5%;
+}
+
+section.gift img.img-bottom.img-left {
+    height: 40vw;
+}
+
+section.gift img.img-bottom.img-right {
+    height: 50%;
+}
+
+.midtext {
+    font-size: 2.5rem;
 }
 
 /***
@@ -270,10 +376,10 @@ PAGE WHERE
 ***/
 
 .internal .hero .img-bottom.img-right {
-    width: 50vw;    
+    width: 50vw;
     z-index: 0;
     right: -10%;
-    bottom:-10%;
+    bottom: -10%;
 }
 
 .internal .rsvp {
@@ -340,18 +446,20 @@ div.navigation a:visited {
 div.navigation .menu a:hover {
     border-bottom: solid 1px var(--green);
 }
+
 div.navigation a.logo:hover {
     border-bottom: solid 1px transparent;
 }
+
 div.navigation .test {
     opacity: 0;
     pointer-events: none;
     display: flex;
     background-color: white;
-    width:100%;
+    width: 100%;
     height: 100%;
     position: absolute;
-    top:0;
+    top: 0;
     z-index: 5;
     border-radius: 100px;
     flex-direction: row;
@@ -369,7 +477,7 @@ div.navigation .test div p {
     color: var(--green);
 }
 
-div.navigation a.logo:hover .test{
+div.navigation a.logo:hover .test {
     opacity: 100%;
 }
 
@@ -412,8 +520,8 @@ p.description {
 }
 
 .column a {
-    color:var(--green);
-    text-decoration:none;
+    color: var(--green);
+    text-decoration: none;
     margin-top: 2rem;
 }
 
@@ -425,12 +533,12 @@ ANIMATIONS
     position: absolute;
     color: var(--light-green);
     bottom: 2rem;
-  }
+}
 
 .arrow-bounce i {
     opacity: 30%;
 }
- 
+
 
 .focus-in {
     -webkit-animation: focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530);
@@ -934,37 +1042,39 @@ ANIMATIONS
 /***
 RESPONSIVENESS
 ***/
-@media (max-width: 1200px) { 
+@media (max-width: 1200px) {
     .home h1 {
         font-size: 4rem;
     }
 }
 
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
     .home h1 {
         font-size: 2.5rem;
     }
+
     .home .hero .img-top.img-left {
         height: 40vh;
     }
-    
+
     .home .hero .img-top.img-right {
         height: 40vh;
     }
-    
+
     .home .hero .img-bottom.img-left {
         height: 50vh;
     }
-    
+
     .home .hero .img-bottom.img-right {
         height: 50vh;
     }
 
-    h1, p.bigtext {
+    h1,
+    p.bigtext {
         font-size: 3rem;
     }
 
-    .video iframe  {
+    .video iframe {
         width: 900px;
         height: 506px;
     }
@@ -974,30 +1084,37 @@ RESPONSIVENESS
     }
 }
 
-@media (max-width: 768px) { 
-    h1, p.bigtext {
+@media (max-width: 768px) {
+
+    h1,
+    p.bigtext {
         font-size: 2rem;
     }
 
     .internal section.hero {
         padding: 0 5rem;
     }
-    
+
     section.standard {
         padding: 5rem;
     }
+
     section.video img.img-top.img-left {
         height: 40vw;
     }
+
     section.video img.img-top.img-right {
         height: 60vw;
     }
+
     section.video img.img-bottom.img-left {
         height: 50vw;
     }
+
     section.video img.img-bottom.img-right {
         height: 25vw;
     }
+
     .video iframe {
         width: 600px;
         height: 338px;
@@ -1017,59 +1134,61 @@ RESPONSIVENESS
     }
 }
 
-@media (max-width: 576px) { 
-.home section.hero .img-top.img-left {
-    height: 30vw;
-}
+@media (max-width: 576px) {
+    .home section.hero .img-top.img-left {
+        height: 30vw;
+    }
 
-.home section.hero .img-top.img-right {
-    height: 45vw;
-}
+    .home section.hero .img-top.img-right {
+        height: 45vw;
+    }
 
-.home section.hero .img-bottom.img-left {
-    height: 60vw;
-}
+    .home section.hero .img-bottom.img-left {
+        height: 60vw;
+    }
 
-.home section.hero .img-bottom.img-right {
-    height: 40vw;
-}
-.home h1 {
-    font-size: 2rem;
-}
+    .home section.hero .img-bottom.img-right {
+        height: 40vw;
+    }
 
-.home .bounce {
-    display: none;
-}
+    .home h1 {
+        font-size: 2rem;
+    }
 
-.home div.rsvp {
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 4;
-}
+    .home .bounce {
+        display: none;
+    }
 
-.internal .navigation {
-    position: fixed;
-}
+    .home div.rsvp {
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 4;
+    }
 
-.internal .logo {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-}
-.internal .rsvp {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-}
+    .internal .navigation {
+        position: fixed;
+    }
 
-.internal .menu {
-    width: 90vw;
-    font-size: 0.9rem;
-    height: 50px;
-}
+    .internal .logo {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+    }
 
-.video iframe {
-    width: 500px;
-    height: 280px;
+    .internal .rsvp {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .internal .menu {
+        width: 90vw;
+        font-size: 0.9rem;
+        height: 50px;
+    }
+
+    .video iframe {
+        width: 500px;
+        height: 280px;
+    }
 }
- }
