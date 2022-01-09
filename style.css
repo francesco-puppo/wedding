@@ -541,12 +541,6 @@ p.description {
     margin-top: 2rem;
 }
 
-
-#location  {
-    padding: 0px 12rem;
-    height: 100vh;
-}
-
 #location .description {
     width: 90%;
     line-height: 1.8rem;
