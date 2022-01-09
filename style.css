@@ -15,11 +15,6 @@
     --shadow-2-elevation-high: 0px 0.2px 0.2px hsl(var(--shadow-color-2) / 0.34), 0px 1.3px 1.5px -0.4px hsl(var(--shadow-color-2) / 0.34), 0.1px 2.4px 2.7px -0.7px hsl(var(--shadow-color-2) / 0.34), 0.1px 4px 4.5px -1.1px hsl(var(--shadow-color-2) / 0.34), 0.1px 6.4px 7.2px -1.4px hsl(var(--shadow-color-2) / 0.34), 0.2px 10px 11.3px -1.8px hsl(var(--shadow-color-2) / 0.34), 0.3px 15.1px 17px -2.1px hsl(var(--shadow-color-2) / 0.34), 0.5px 22.3px 25.1px -2.5px hsl(var(--shadow-color-2) / 0.34);
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
 @font-face {
     font-family: 'Amalfi-Coast';
     src: url('assets/fonts/Amalfi-Coast.ttf.woff') format('woff'),
@@ -30,10 +25,17 @@ html {
     font-style: normal;
 }
 
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 body {
     margin: 0px;
 }
 
+/* Makes sure everything is centered. Always. */
 section,
 div {
     display: flex;
@@ -44,30 +46,49 @@ div {
     position: relative;
 }
 
+/* Sets minimum height for the sections, so they look better  */
 section {
     overflow: hidden;
     min-height: 90vh;
 }
 
+/* Basic font settings  */
+h1,
+h2,
+h3,
+p {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text);
+    font-weight: 400;
+}
+
+/* Settings for the first row of every page */
 section.hero {
-    /* background-image: url("assets/hero-bg.jpg"); */
     background-color: var(--beige);
-    background-position: center;
-    background-size: cover;
     height: 100vh;
 }
 
+/* Non-hero sections */
+section.standard {
+    padding: 12rem;
+    z-index: 2;
+    background-color: white;
+}
+
+/* All images that need to stay on top of other elements  */
 .img-over {
     display: block;
     position: absolute;
     pointer-events: none;
 }
 
+/* Images in the hero that need to stay below other rows when scrolling */
 section.hero .img-over {
     position: fixed;
     z-index: 1;
 }
 
+/* Stick images to specific positions */
 .img-top {
     top: 0%;
 }
@@ -84,6 +105,21 @@ section.hero .img-over {
     left: 0%;
 }
 
+/***
+HOME
+***/
+
+/* Font settings for the main title */
+.home h1 {
+    font-family: 'Amalfi-Coast';
+    text-align: center;
+    line-height: 1.05em;
+    font-size: 5rem;
+    letter-spacing: .5px;
+    color: var(--green);
+}
+
+/* Set height for images on the hero section */
 .home .hero .img-top.img-left {
     height: 45vh;
 }
@@ -100,35 +136,26 @@ section.hero .img-over {
     height: 60vh;
 }
 
-div.overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    /* background-color: var(--beige);
-    opacity: 50%; */
-    padding-bottom: 15%;
+/* Sets the wedding date below the h1 */
+.home .date {
+    color: var(--green);
+    font-size: 2.2rem;
+    margin-top: 2rem;
 }
 
-h1,
-h2,
-h3,
-p {
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--text);
-    font-weight: 400;
-}
+/***
+RSVP Button
+***/
 
+/* Sticks button to the right side and makes sure it stays on top of everything else */
 .rsvp {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    border-radius: 100px;
     z-index: 4;
 }
 
+/* Defines size of the button and basic effects */
 .rsvp a img {
     height: 80px;
     transition: all 0.8s ease-in-out;
@@ -136,36 +163,10 @@ p {
     border-radius: 100px;
 }
 
+/* Button hover effect */
 .rsvp a:hover img {
     transform: scale(1.1);
     box-shadow: var(--shadow-2-elevation-high);
-    border-radius: 100px;
-}
-
-.home h1 {
-    font-family: 'Amalfi-Coast';
-    text-align: center;
-    line-height: 1.05em;
-    font-size: 5rem;
-    letter-spacing: .5px;
-    color: var(--green);
-    /* transition: all 1s ease-in-out; */
-}
-
-/* section.hero>div {
-    z-index: 0;
-} */
-
-p.date {
-    color: var(--green);
-    font-size: 2.2rem;
-    margin-top: 2rem;
-}
-
-section.standard {
-    padding: 12rem;
-    z-index: 2;
-    background-color: white;
 }
 
 /* section.standard,
@@ -192,7 +193,7 @@ p.hugetext {
     margin: 0px;
 }
 
-span.daje {
+.daje {
     font-weight: bolder;
     font-style: italic;
 }
@@ -490,6 +491,15 @@ div.navigation a.logo:hover .test {
 }
 
 /* Accomodations */
+
+#accomodations .bigtext {
+    margin-bottom: 3rem;
+}
+
+section#accomodations  {
+    padding-top: 1rem;
+}
+
 .columns {
     display: flex;
     flex-direction: row;
@@ -524,6 +534,35 @@ p.description {
     text-decoration: none;
     margin-top: 2rem;
 }
+
+
+#location  {
+    padding: 0px 12rem;
+    height: 100vh;
+}
+
+#location .description {
+    width: 90%;
+    line-height: 1.8rem;
+}
+
+#location .description a {
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+    transition: all 0.5s ease-in-out;
+    color: var(--green);
+    border-bottom: solid 0px transparent;
+    text-decoration: underline;
+}
+
+#location .description a:hover {
+    color: var(--red);
+}
+
+#location .column img {
+    width: 100%;
+}
+
 
 /***
 ANIMATIONS
