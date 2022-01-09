@@ -276,7 +276,8 @@ section.video img.img-bottom.img-right {
     height: 40vh;
 }
 
-p.bigtext a {
+p.bigtext a,
+p.hugetext a {
     font-weight: bolder;
     font-style: italic;
     display: inline-block;
@@ -287,7 +288,8 @@ p.bigtext a {
     transition: all .5s ease-in-out;
 }
 
-p.bigtext a:hover {
+p.bigtext a:hover,
+p.hugetext a:hover {
     color: var(--red);
 }
 
@@ -1126,7 +1128,8 @@ RESPONSIVENESS
 @media (max-width: 768px) {
 
     h1,
-    p.bigtext {
+    p.bigtext,
+    p.hugetext {
         font-size: 2rem;
     }
 
