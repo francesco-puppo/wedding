@@ -219,6 +219,10 @@ p.subtext {
     margin: 0px;
 }
 
+a:visited {
+    color: var(--text);
+}
+
 p.details a,
 p.details a:visited,
 p.details a:any-link,
