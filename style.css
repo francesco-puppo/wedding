@@ -84,7 +84,7 @@ section.standard {
 
 /* Images in the hero that need to stay below other rows when scrolling */
 section.hero .img-over {
-    position: fixed;
+    /* position: fixed; */
     z-index: 1;
 }
 
@@ -239,7 +239,7 @@ p.details a:any-link,
 
 p.details a:hover,
 .column a:hover {
-    color: var(--green);
+    color: var(--red);
 }
 
 section.alt {
@@ -293,7 +293,8 @@ p.hugetext a {
 }
 
 p.bigtext a:hover,
-p.hugetext a:hover {
+p.hugetext a:hover,
+p.subtext a:hover {
     color: var(--red);
 }
 
