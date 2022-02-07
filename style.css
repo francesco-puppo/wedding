@@ -2,6 +2,7 @@
     --green: #5B7343;
     --light-green: #B1BF93;
     --yellow: #D6D989;
+    --yellow-down:#fbfdba;
     --beige: #f6f2e9;
     --red: #A66565;
     --text: #5B7343;
@@ -64,6 +65,10 @@ p {
 
 h1 a {
     display: inline-block;
+    transition:all 0.75s ease-in-out;
+}
+h1 a:hover {
+    color: var(--red);
 }
 
 /* Settings for the first row of every page */
@@ -583,10 +588,34 @@ p.description {
 HONEYMOON
 ***/
 
-h1 {
+.honeymoon h1 {
     margin-bottom: 4rem
 }
 
+.honeymoon span.iban {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.honeymoon span.iban_details {
+    display: block;
+font-size: 1.5rem;
+}
+
+
+/***
+TEXT HIGHLIGHT
+***/
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: var(--yellow-down);
+}
+
+::selection {
+    background: var(--yellow-down);
+}
 
 /***
 ANIMATIONS
