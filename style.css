@@ -63,7 +63,9 @@ p {
     font-weight: 400;
 }
 
-h1 a {
+h1 a,
+h1 a:visited {
+    color: var(--text);
     display: inline-block;
     transition:all 0.75s ease-in-out;
 }
@@ -588,6 +590,14 @@ p.description {
 HONEYMOON
 ***/
 
+
+.honeymoon hero {
+    padding: 0em 13em;
+}
+.honeymoon div.navigation {
+    width:80vw;
+justify-content: space-between;
+}
 .honeymoon h1 {
     margin-bottom: 4rem
 }
@@ -1230,6 +1240,17 @@ RESPONSIVENESS
         padding: 0rem;
         width: 100%;
     }
+    .logo div.test {
+        display: none;
+    }
+
+    .honeymoon span.iban {
+        font-size: 1.5rem;
+    }
+    .honeymoon span.iban_details {
+        font-size: 1.2rem;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -1296,4 +1317,9 @@ RESPONSIVENESS
     .home section.gift .img-bottom.img-right {
         height: 70vw;
     }
+}
+
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
 }
