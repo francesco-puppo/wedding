@@ -281,7 +281,8 @@ section.video img.img-bottom.img-right {
 }
 
 p.bigtext a,
-p.hugetext a {
+p.hugetext a
+ {
     font-weight: bolder;
     font-style: italic;
     display: inline-block;
@@ -290,6 +291,12 @@ p.hugetext a {
     text-decoration: underline;
     /* padding: 0.2em 0.05em; */
     transition: all .5s ease-in-out;
+}
+
+p.subtext a {
+    color: var(--text);
+    font-weight: bolder;
+    font-style: italic;
 }
 
 p.bigtext a:hover,
@@ -1181,19 +1188,19 @@ RESPONSIVENESS
 
 @media (max-width: 576px) {
     .home section.hero .img-top.img-left {
-        height: 30vw;
+        height: 35vw;
     }
 
     .home section.hero .img-top.img-right {
-        height: 45vw;
+        height: 40vw;
     }
 
     .home section.hero .img-bottom.img-left {
-        height: 60vw;
+        height: 0vw;
     }
 
     .home section.hero .img-bottom.img-right {
-        height: 40vw;
+        height: 75vw;
     }
 
     .home h1 {
@@ -1235,5 +1242,12 @@ RESPONSIVENESS
     .video iframe {
         width: 500px;
         height: 280px;
+    }
+
+    .home section.gift .img-bottom.img-left {
+        height: 0vw;
+    }
+    .home section.gift .img-bottom.img-right {
+        height: 70vw;
     }
 }
