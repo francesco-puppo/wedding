@@ -62,6 +62,10 @@ p {
     font-weight: 400;
 }
 
+h1 a {
+    display: inline-block;
+}
+
 /* Settings for the first row of every page */
 section.hero {
     background-color: var(--beige);
@@ -343,23 +347,23 @@ img.remark-top {
 
 a.button {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.5rem;
-    margin-top: 4rem;
+    font-size: 1.1rem;
+    margin-top: 3rem;
     text-decoration: none;
-    color: var(--green);
-    background: var(--light-green);
+    color: white;
+    background: var(--green);
     padding: 20px 30px;
-    border-radius: 5px;
+    border-radius: 500px;
     display: inline-block;
     /* border-bottom: solid 5px transparent; */
     box-shadow: var(--shadow-1-elevation-medium);
-    transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
+    transition: all 1s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 a.button:hover {
     /* border-bottom:solid 5px var(--light-green); */
     box-shadow: var(--shadow-1-elevation-high);
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
 
 /*** GIFT SECTION ***/
@@ -573,6 +577,14 @@ p.description {
 
 .icon {
     width: 25px;
+}
+
+/***
+HONEYMOON
+***/
+
+h1 {
+    margin-bottom: 4rem
 }
 
 
@@ -1145,6 +1157,11 @@ RESPONSIVENESS
 
     .internal section.hero {
         padding: 0 5rem;
+    }
+
+    .internal .hero .img-bottom.img-right {
+        height: 65vw;
+        width: auto;
     }
 
     section.standard {
