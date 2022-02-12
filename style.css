@@ -521,10 +521,6 @@ div.navigation a.logo:hover .test {
     margin-bottom: 3rem;
 }
 
-section#accomodations  {
-    padding-top: 1rem;
-}
-
 .columns {
     display: flex;
     flex-direction: row;
